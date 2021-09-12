@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1100">
+    <!-- CSS only -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="task1 project/sass/style.css"> -->
+    <style type="text/css" media="screen">
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            overflow-x: hidden;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            cursor: default;
+        }
+            html {
+            font-size: 62.5%;
+            }
+            @media (max-width: 2560px) {
+            html {
+                font-size: 65%;
+            }
+            }
+            @media (max-width: 1600px) {
+            html {
+                font-size: 65%;
+            }
+            }
+            @media (max-width: 1200px) {
+            html {
+                font-size: 65%;
+            }
+            }
+            @media (max-width: 768px) {
+            html {
+                font-size: 35%;
+            }
+            }
+            @media (max-width: 540px) and (max-height: 720px) {
+            html {
+                font-size: 35%;
+            }
+            }
+            @media (max-width: 450px) {
+            html {
+                font-size: 29%;
+            }
+            }
+            @media (max-width: 390px) {
+            html {
+                font-size: 26.5%;
+            }
+            }
+            @media (max-width: 320px) {
+            html {
+                font-size: 21%;
+            }
+            }
+            @media (max-width: 280px) {
+            html {
+                font-size: 17%;
+            }
+            }
+            .main-container {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            scroll-behavior: smooth;
+            /* -ms-scroll-snap-type: y mandatory;
+                scroll-snap-type: y mandatory; */
+            overflow-y: scroll;
+            }
+            .main-container nav {
+            position: -webkit-sticky;
+            /* position: sticky; */
+            z-index: 10;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+            /* padding: 0 5%; */
+            height: 10.0rem;
+            }
+            .main-container nav .logo {
+            float: left;
+            width: 25%;
+            height: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+            align-items: left;
+            /* -webkit-box-pack: end;
+            -ms-flex-pack: end; */
+            justify-content: flex-end;
+            font-size: 2.4rem;
+            color: #200808;
+            }
+            .main-container nav .links {
+            float: right;
+            padding: 0;
+            margin: 0;
+            width: 60%;
+            height: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            }
+            .main-container nav .links li {
+            list-style: none;
+            }
+            .main-container nav .links a {
+            display: block;
+            padding: 1em;
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #fefefe;
+            text-decoration: none;
+            }
+            .main-container nav .links a:hover {
+            color: #ffe26d;
+            }
+            /* .main-container #navToggle {
+            position: absolute;
+            top: -10rem;
+            }
+            .main-container nav .icon {
+            display: none;
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+            }
+            .main-container nav .icon .line {
+            width: 3rem;
+            height: .5rem;
+            background-color: #fefefe;
+            margin: .5rem;
+            border-radius: .3rem;
+            -webkit-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+            } */
+            .main-container .main-page {
+            height: 500px;
+            width: 100%;
+            background-image: url('https://images.unsplash.com/photo-1570877442690-9061855f0b1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1');
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+            }
+            .main-container .main-page .main-content {
+            position: absolute;
+            top: 15rem;
+            left: 32.5rem;
+            height: 100%;
+            width: 100vw;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+            .main-container .main-page .main-content p {
+            font-size: 4.5rem;
+            color: #fefefe;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            padding: 1rem;
+            }
+            .main-container .main-page .main-content h2 {
+            font-weight: 100;
+            font-family: 'Ubuntu', sans-serif;
+            color: #fefefe;
+            padding: 1rem;
+            }
+            .main-container .main-page .main-content .button {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            }
+            .main-container .main-page .main-content .learnMore1,
+            .main-container .main-page .main-content .learnMore2 {
+            height: 3.5rem;
+            width: 12rem;
+            margin: 1rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-family: 'Ubuntu', sans-serif;
+            border: 0;
+            border-radius: 0.5rem;
+            }
+            .main-container .main-page .main-content .learnMore1 {
+            background-color: #ffe26d;
+            }
+
+            .main-container .main-page .main-content .learnMore1 a {
+            text-decoration: none;
+            color: #000;
+            }
+
+            .main-container .main-page .main-content .learnMore2 {
+            background-color: #5f4a7b;
+            color: #fefefe;
+            }
+
+            .main-container .main-page .main-content .learnMore2 a {
+            text-decoration: none;
+            color: #fefefe;
+            }
+            .main-container .welcome-page {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            background-color: #fefefe;
+            }
+            .main-container .welcome-page .welcome-content {
+            position: absolute;
+            height: 100%;
+            width: 100vw;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            place-items: center;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                /* overflow: hidden; */
+            /* background-color: #fefefe; */
+            }
+            .main-container .welcome-page .welcome-content p {
+            font-size: 4.5rem;
+            margin-bottom: 40rem;
+            color: black;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            overflow: hidden;
+            }
+            .main-container .welcome-page .welcome-content .content {
+            position: absolute;
+            width: 60%;
+            height: -webkit-fit-content;
+            height: -moz-fit-content;
+            height: fit-content;
+            left: 30rem;
+            top: 11rem;
+            padding: 2rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+                overflow: hidden;
+            }
+            .main-container .welcome-page .welcome-content .content h2 {
+            font-size: 2rem;
+            font-weight: 100;
+            font-family: 'Ubuntu', sans-serif;
+            color: #5f4a7b;
+            }
+            .main-container .welcome-page .welcome-content .cards {
+            position: absolute;
+            top: 47.5%;
+            width: 70vw;
+            height: 80%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+            /* -ms-flex-wrap: wrap;
+                flex-wrap: wrap; */
+            background-color: rgba(255, 245, 255, 0.1);
+            -webkit-box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.05);
+                    box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.05);
+            padding: 1rem;
+            }
+            .main-container .welcome-page .welcome-content .cards #circle {
+            margin-left: 5rem;
+            background: #5f4a7b;
+            border-radius: 50%;
+            width: 5rem;
+            height: 5rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            }
+            .main-container .welcome-page .welcome-content .cards .card1,
+            .main-container .welcome-page .welcome-content .cards .card2,
+            .main-container .welcome-page .welcome-content .cards .card3 {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            width: 15rem;
+            height: -webkit-fit-content;
+            height: -moz-fit-content;
+            height: fit-content;
+            }
+            .main-container .welcome-page .welcome-content .cards h3 {
+            padding: 2rem;
+            color: #5f4a7b;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 900;
+            font-family: 'Montserrat', sans-serif;
+            }
+            .main-container .welcome-page .welcome-content .cards p {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.25rem;
+            margin-bottom: 0rem;
+            color: #5f4a7b;
+            padding-bottom: 2rem;
+            letter-spacing: .1rem;
+            }
+            .main-container .welcome-page .welcome-content .cards .learnMore2 {
+            height: 3.5rem;
+            width: 12rem;
+            margin: 1rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-family: 'Ubuntu', sans-serif;
+            border: 0;
+            border-radius: 0.5rem;
+            background-color: #5f4a7b;
+            color: #fefefe;
+            }
+            .main-container .welcome-page .welcome-content .cards .learnMore2 a {
+            text-decoration: none;
+            color: #fefefe;
+            }
+            .main-container .projects {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            background-color: #fefefe;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+                    overflow: hidden;
+            }
+            .main-container .projects-page .project-content {
+            /* position: absolute; */
+            /* top: 10rem; */
+            height: 100%;
+            width: 100vw;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            text-align: center;
+            -webkit-box-pack: space-evenly;
+                -ms-flex-pack: space-evenly;
+                    justify-content: space-evenly;
+            background-color: #fff;
+            overflow: hidden;
+            }
+            .main-container .projects-page .project1,
+            .main-container .projects-page .project2,
+            .main-container .projects-page .project3,
+            .main-container .projects-page .project4 {
+            -webkit-box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+                    box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+            }
+            .main-container .projects-page .project1 button:hover,
+            .main-container .projects-page .project2 button:hover,
+            .main-container .projects-page .project3 button:hover,
+            .main-container .projects-page .project4 button:hover {
+            -webkit-transform: scale(1.1);
+                    transform: scale(1.1);
+            -webkit-transition: linear 1s all;
+            transition: linear 1s all;
+            }
+            .main-container .projects-page p {
+            font-size: 4.5rem;
+            color: #000;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            padding: 2rem;
+            overflow: hidden;
+            }
+            .main-container .projects-page img {
+            height: 60%;
+            width: 100%;
+            background-size: cover;
+            overflow: hidden;
+            }
+            .main-container .projects-page h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            margin-left: 2rem;
+            padding: 1rem;
+            overflow: hidden;
+            }
+            .main-container .projects-page h4 {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 800;
+            /* font-size: 1.25rem; */
+            padding: 1rem;
+            margin-left: 2rem;
+            color: #5f4a7b;
+            overflow: hidden;
+            }
+            .main-container .projects-page .learnMore2 {
+            height: 3.5rem;
+            width: 15rem;
+            margin: 1rem;
+            margin-left: 3rem;
+            padding: .5rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-family: 'Ubuntu', sans-serif;
+            border: 0;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            background-color: #5f4a7b;
+            color: #fefefe;
+            overflow: hidden;
+            }
+            .main-container .projects-page .learnMore2 a {
+            text-decoration: none;
+            color: #fefefe;
+            overflow: hidden;
+            }
+            .main-container .pricing-page {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            background-color: #fefefe;
+            }
+            .main-container .pricing-page .pricing-content {
+            position: absolute;
+            height: 100%;
+            width: 100vw;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            place-items: center;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            text-align: center;
+            overflow: hidden;
+            background-color: #fefefe;
+            }
+            .main-container .pricing-page .pricing-content p {
+            font-size: 4.5rem;
+            /* margin-top: 40rem; */
+            margin-bottom: 40rem;
+            color: #000;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            line-break: loose;
+            overflow: hidden;
+            }
+            .main-container .pricing-page .pricing-content .cards {
+            position: absolute;
+            top: 20%;
+            width: 80vw;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            background-color: rgba(255, 245, 255, 0.1);
+            padding: 2rem;
+            overflow: hidden;
+            }
+            .main-container .pricing-page .pricing-content .cards .card1,
+            .main-container .pricing-page .pricing-content .cards .card2,
+            .main-container .pricing-page .pricing-content .cards .card3 {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
+                    box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
+            width: 20rem;
+            height: 35rem;
+            overflow: hidden;
+            }
+            .main-container .pricing-page .pricing-content .cards h3 {
+            margin: 2rem 0rem;
+            color: #5f4a7b;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 900;
+            font-size: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            overflow: hidden;
+            }
+            .main-container .pricing-page .pricing-content .cards .tran {
+            color: rgba(0, 0, 0, 0.35);
+            }
+            .main-container .pricing-page .pricing-content .cards p {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 0rem;
+            color: #5f4a7b;
+            padding-bottom: 2rem;
+            overflow: hidden;
+            }
+            .main-container .pricing-page .pricing-content .cards .learnMore2 {
+            height: 3.5rem;
+            width: 16rem;
+            margin: 1rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-family: 'Ubuntu', sans-serif;
+            border: 0;
+            border-radius: 0.5rem;
+            background-color: #5f4a7b;
+            color: #fefefe;
+            overflow: hidden;
+            }
+            .main-container .pricing-page .pricing-content .cards .learnMore2:hover {
+            -webkit-transform: scale(1.1);
+                    transform: scale(1.1);
+            -webkit-transition: linear 1s all;
+            transition: linear 1s all;
+            overflow: hidden;
+            }
+            .main-container .pricing-page .pricing-content .cards .learnMore2 a {
+            text-decoration: none;
+            color: #fefefe;
+            overflow: hidden;
+            }
+            .main-container .video-page {
+            position: relative;
+            height: 130vh;
+            width: 100vw;
+            background-color: #5f4a7b;
+            }
+            .main-container .video-page .video-content {
+            position: absolute;
+            height: 100%;
+            width: 100vw;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+                    overflow: hidden;
+            }
+            .main-container .video-page .video-content p {
+            font-size: 4.5rem;
+            margin-bottom: 60rem;
+            color: #fefefe;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            padding: 2rem;
+            overflow: hidden;
+            }
+            .main-container .video-page .video-content .video-looper {
+            position: absolute;
+            font-size: 10rem;
+            color: #fff;
+            background-color: #000;
+            margin-top: 5rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-animation: marquee 10s linear infinite;
+            animation: marquee 10s linear infinite;
+            }
+            @-webkit-keyframes marquee {
+            0% {
+                -webkit-transform: translateX(100%);
+                        transform: translateX(100%);
+            }
+            100% {
+                -webkit-transform: translateX(-100%);
+                        transform: translateX(-100%);
+            }
+            }
+            @keyframes marquee {
+            0% {
+                -webkit-transform: translateX(100%);
+                transform: translateX(-20%);
+            }
+            25% {
+                -webkit-transform: translateX(0%);
+                transform: translateX(0%);
+            }
+            75% {
+                -webkit-transform: translateX(100%);
+                transform: translateX(10%);
+            }
+            100% {
+                -webkit-transform: translateX(0%);
+                transform: translateX(20%);
+            }
+            }
+            .main-container .team-page {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            background-color: #fefefe;
+            overflow: hidden;
+            }
+            .main-container .team-page .team-content {
+            position: absolute;
+            height: 120%;
+            width: 100vw;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+            place-items: center;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            background-color: #fefefe;
+            overflow: hidden;
+            }
+            .main-container .team-page .team-content .zippy {
+            font-size: 4.5rem;
+            /* margin-bottom: 40rem; */
+            color: #000;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            padding: 2rem;
+            overflow: hidden;
+            }
+            .main-container .team-page .team-content p {
+            font-size: 1.5rem;
+            color: #000;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            padding: 1rem;
+            overflow: hidden;
+            }
+            .main-container .team-page .team-content h3 {
+            font-size: 1rem;
+            color: #000;
+            font-weight: bold;
+            font-weight: 800;
+            font-family: 'Ubuntu', sans-serif;
+            overflow: hidden;
+            }
+            .main-container .team-page .team-content .contains1 {
+            position: absolute;
+            top: 10rem;
+            padding: 2rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            height: -webkit-fit-content;
+            height: -moz-fit-content;
+            height: fit-content;
+            width: 60vw;
+            overflow: hidden;
+            }
+            .main-container .team-page .team-content .contains2 {
+            position: absolute;
+            bottom: 5rem;
+            padding: 2rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+            align-items: center;
+            /* height: -webkit-fit-content;
+            height: -moz-fit-content;
+            height: fit-content; */
+            width: 60vw;
+            overflow: hidden;
+            }
+            .main-container .team-page .team-content .one {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+            justify-content: center;
+            overflow: hidden;
+            }
+            .main-container .team-page .team-content img {
+            height: 15rem;
+            width: 15rem;
+            -webkit-clip-path: circle();
+                    clip-path: circle();
+            overflow: hidden;
+            }
+            .main-container .life-page {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            background-color: #fefefe;
+            }
+            .main-container .life-page .life-content {
+            position: absolute;
+            height: 100%;
+            width: 100vw;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+            place-items: center;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            background-color: #fefefe;
+            }
+            .main-container .life-page .life-content p {
+            font-size: 4.5rem;
+            /* margin-bottom: 60rem; */
+            color: #000;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            }
+            .main-container .newsletter-page {
+            position: relative;
+            height: 200%;
+            width: 100vw;
+            /* background-color: #fefefe; */
+            /* scroll-snap-align: start; */
+            }
+            .main-container .newsletter-page .news {
+            position: absolute;
+            height: 300px;
+            width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            padding-top: 1rem;
+            place-items: center;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            background-image: url('https://thumbs.dreamstime.com/b/pamban-bridge-rameswaram-connects-town-island-to-mainland-india-was-s-first-sea-second-longest-108348975.jpg');
+            background-size: cover;
+            /* background-color: #5f4a7b; */
+            }
+            .main-container .newsletter-page .news p {
+            font-size: 5.5rem;
+            color: #000;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            }
+            .main-container .newsletter-page .news input{
+                height: 5%;
+                width: 25%;
+            }
+            .main-container .newsletter-page .news .learnMore1{
+                height: 3.5rem;
+            width: 12rem;
+            /* margin: 1rem; */
+            text-transform: uppercase;
+            font-weight: 700;
+            font-family: 'Ubuntu', sans-serif;
+            border: 0;
+            border-radius: 0.5rem;
+            background-color: #ffe26d;
+            }
+            .main-container .newsletter-page .news .learnMore2{
+            height: 3.5rem;
+            width: 12rem;
+            margin: 1rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-family: 'Ubuntu', sans-serif;
+            border: 0;
+            border-radius: 0.5rem;
+            background-color:#5f4a7b;
+            }
+            .main-container .newsletter-page .blog {
+            position: relative;
+            height: 65%;
+            top: 35%;
+            width: 100vw;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            /* padding-top: 1rem; */
+            place-items: center;
+            /* justify-content: center; */
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            background-color: #fff;
+            overflow: hidden;
+            }
+            .main-container .newsletter-page .blog p {
+            font-size: 4.5rem;
+            color: #000;
+            /* margin-bottom: 40rem; */
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            }
+            .main-container .newsletter-page .blog .cards {
+            position: absolute;
+            top: 10%;
+            width: 100vw;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            background-color: rgba(255, 245, 255, 0.1);
+            padding: 2rem;
+            overflow: hidden;
+            }
+            .main-container .newsletter-page .blog .cards .card1,
+            .main-container .newsletter-page .blog .cards .card2,
+            .main-container .newsletter-page .blog .cards .card3{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
+                    box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
+            width: 30rem;
+            height: 50rem;
+            overflow: hidden;
+            }
+            .main-container .newsletter-page .blog .cards h3 {
+            margin: 2rem 0rem;
+            color: #5f4a7b;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 900;
+            font-size: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            overflow: hidden;
+            }
+            .main-container .newsletter-page .blog .cards .tran {
+            color: rgba(0, 0, 0, 0.35);
+            }
+            .main-container .newsletter-page .blog .cards p {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 0rem;
+            color: #5f4a7b;
+            /* padding-bottom: 2rem; */
+            overflow: hidden;
+            }
+            .main-container .newsletter-page .blog .cards .learnMore2 {
+            height: 3.5rem;
+            width: 16rem;
+            margin: 1rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-family: 'Ubuntu', sans-serif;
+            border: 0;
+            border-radius: 0.5rem;
+            background-color: #5f4a7b;
+            color: #fefefe;
+            overflow: hidden;
+            }
+            .main-container .newsletter-page .blog .cards .learnMore2:hover {
+            -webkit-transform: scale(1.1);
+                    transform: scale(1.1);
+            -webkit-transition: linear 1s all;
+            transition: linear 1s all;
+            overflow: hidden;
+            }
+            .main-container .newsletter-page .blog .cards .learnMore2 a {
+            text-decoration: none;
+            color: #fefefe;
+            overflow: hidden;
+            }
+            .main-container .contact-page .contact-content{
+                position: absolute;
+                display: flex;
+                height: 600px;
+                width: 100vw;
+                padding: 2rem;
+                margin-top: 20rem;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                place-items: center;
+                justify-content: center;
+                -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
+                    overflow: hidden;
+            }
+            .main-container .contact-page .contact-content .map{
+                float: left;
+                height: 450px;
+                width: 600px;
+                overflow: hidden;
+            }
+            .main-container .contact-page .contact-content .contact{
+                /* margin-left: 500px; */
+                background-color: #ffe26d;
+                height: 450px;
+                width: 700px;
+            }
+            .main-container .contact-page .contact-content .contact p{
+            font-size: 2.5rem;
+            color: #000;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            overflow: hidden;
+            }
+            .main-container .contact-page .contact-content .contact label{
+                font-size: 1.5rem;
+                color: #000;
+                font-weight: bold;
+                font-family: 'Montserrat', sans-serif;
+            }
+            @media screen and (max-width: 768px) {
+            .main-container nav .logo {
+                float: none;
+                width: auto;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+            }
+            .main-container nav .links {
+                float: none;
+                position: fixed;
+                z-index: 9;
+                left: 0;
+                right: 0;
+                top: 10rem;
+                bottom: 100%;
+                width: auto;
+                height: auto;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                -webkit-box-pack: space-evenly;
+                    -ms-flex-pack: space-evenly;
+                        justify-content: space-evenly;
+                background-color: rgba(0, 0, 0, 0.8);
+                overflow: hidden;
+                -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                -webkit-transition: all .5s ease-in-out;
+                transition: all .5s ease-in-out;
+            }
+            .main-container nav .links a {
+                font-size: 2rem;
+            }
+            .main-container nav :checked ~ .links {
+                bottom: 0;
+            }
+            .main-container nav .icon {
+                display: block;
+            }
+            .main-container nav :checked ~ .icon .line:nth-child(1) {
+                -webkit-transform: translateY(1rem) rotate(225deg);
+                        transform: translateY(1rem) rotate(225deg);
+            }
+            .main-container nav :checked ~ .icon .line:nth-child(3) {
+                -webkit-transform: translateY(-1rem) rotate(-225deg);
+                        transform: translateY(-1rem) rotate(-225deg);
+            }
+            .main-container nav :checked ~ .icon .line:nth-child(2) {
+                opacity: 0;
+            }
+            }
+/*# sourceMappingURL=main.css.map */
+    </style>
+    <title>Zippy</title>
+</head>
+<body>
+  <div class="main-container">
+        <div class="main-page">
+            <nav>
+                <div class="logo"><strong>Zippy</strong></div>
+                <ul class="links">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#pricing">PRICING</a></li>
+                    <li><a href="#team">TEAM</a></li>
+                    <li><a href="#blog">BLOG</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+                <!-- <label for="navToggle" class="icon">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </label> -->
+            </nav>
+            <div class="main-content">
+                <p>One page promising to <br> fill all your needs!</p>
+                <h2>This is Photoshop's version of Lorem Ipsum. Proin <br> gravida nibh vel velit auctor aliquet.</h2>
+                <div class="button">
+                    <a href="#"><button class="learnMore1">Learn More</button></a>
+                    <a href="#"><button class="learnMore2">Learn More</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="welcome-page">
+            <div class="welcome-content">
+                <p>Welcome to Zippy</p>
+                <div class="content">
+                    <h2>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor <br>
+                        aliquet. Aenean sol- licitudin, loremquis bibendum  auctor.
+                    </h2>
+                </div>
+                <div class="cards">
+                    <div class="card1">
+                        <div id="circle"><i class="fa fa-bell fa-3x" aria-hidden="true"></i></div>
+                        <h3>Lorem Ipsum</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos cum debitis rem quaerat
+                            recusandae sit quia, beatae delectus ullam.</p>
+                        <a href="#"><button class="learnMore2">Learn More</button></a>
+                    </div>
+                    <div class="card2">
+                        <div id="circle"><i class="fa fa-envelope fa-3x" aria-hidden="true"></i></div>
+                        <h3>Dolor Sit</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos cum debitis rem quaerat
+                            recusandae sit quia, beatae delectus ullam.</p>
+                        <a href="#"><button class="learnMore2">Learn More</button></a>
+                    </div>
+                    <div class="card3">
+                        <div id="circle"><i class="fa fa-database fa-3x" aria-hidden="true"></i></div>
+                        <h3>Consecteture</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos cum debitis rem quaerat
+                            recusandae sit quia, beatae delectus ullam.</p>
+                        <a href="#"><button class="learnMore2">Learn More</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="projects-page">
+            <p>Projects</p>
+            <div class="project-content">
+                <div class="project1">
+                    <img src="https://images.woodenstreet.de/image/data%2Fhome-decors%2Fclocks%2Fwall-clocks%2Ftimestamp-cycle-shaped-black-wall-clock-with-wooden-seat-and-handle%2Ffront-1.jpg" alt="" srcset="">
+                    <h1>Project Name</h1>
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores aliquid voluptas libero
+                        officiis, quis cum numquam nesciunt incidunt ullam natus.</h4>
+                    <a href="#"><button class="learnMore2">Launch Case Study</button></a>
+                </div>
+                <div class="project2">
+                    <img src="https://static.toiimg.com/thumb/75311982.cms?width=680&height=512&imgsize=163482" alt="" srcset="">
+                    <h1>Project Name</h1>
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores aliquid voluptas libero
+                        officiis, quis cum numquam nesciunt incidunt ullam natus.</h4>
+                    <a href="#"><button class="learnMore2">Launch Case Study</button></a>
+                </div>
+                <div class="project3">
+                    <img src="https://nationaltoday.com/wp-content/uploads/2020/03/national-landline-telephone-day.jpg" alt="" srcset="">
+                    <h1>Project Name</h1>
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores aliquid voluptas libero
+                        officiis, quis cum numquam nesciunt incidunt ullam natus.</h4>
+                    <a href="#"><button class="learnMore2">Launch Case Study</button></a>
+                </div>
+                <div class="project4">
+                    <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="" srcset="">
+                    <h1>Project Name</h1>
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores aliquid voluptas libero
+                        officiis, quis cum numquam nesciunt incidunt ullam natus.</h4>
+                    <a href="#"><button class="learnMore2">Launch Case Study</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="pricing-page">
+            <div class="pricing-content">
+                <p>Pricing Table</p>
+                <div class="cards">
+                    <div class="card1">
+                        <h3>Standard Plan</h3>
+                        <h3 class="tran">Free</h3>
+                        <p>2 GB Available <br><br> 15 Max Contacts <br><br> 20 Messages <br><br> Disgusting Ads</p>
+                        <a href="#"><button class="learnMore2">Buy</button></a>
+                    </div>
+                    <div class="card2">
+                        <h3>Business Plan</h3>
+                        <h3 class="tran">19$/MONTH</h3>
+                        <p>10 GB Available <br><br> 75 Max Contacts <br><br> 120 Messages <br><br> Ads Free</p>
+                        <a href="#"><button class="learnMore2">Buy</button></a>
+                    </div>
+                    <div class="card3">
+                        <h3>Premium Plan</h3>
+                        <h3 class="tran">24$/MONTH</h3>
+                        <p>100 GB Available <br><br> Unlimited Contacts <br><br> Unlimited Messages <br><br> Ads Free
+                        </p>
+                        <a href="#"><button class="learnMore2">Buy</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video-page">
+            <div class="video-content">
+                <p>Video Projects</p>
+                <div class="video-looper">
+                <iframe width="967" height="544" src="https://www.youtube.com/embed/Zw96TzzSjvg"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                &nbsp;&nbsp;&nbsp;
+                <iframe width="967" height="544" src="https://www.youtube.com/embed/VqjtUzuuf6o"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                &nbsp;&nbsp;&nbsp;
+                <iframe width="967" height="544" src="https://www.youtube.com/embed/gBelKUZ_VDE"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                &nbsp;&nbsp;&nbsp;
+                </div>
+            </div>
+        </div>
+        <div class="team-page">
+            <div class="team-content">
+                <p class="zippy">Zippy Team</p>
+                <div class="contains1">
+                    <div class="one">
+                        <img src="images/team1.jpg" alt="">
+                        <p>SARA JOHNSON</p>
+                        <h3>Creative Head</h3>
+                    </div>
+                    <div class="one">
+                        <img src="images/team2.jpg" alt="">
+                        <p>MATT ALEX</p>
+                        <h3>Art Director</h3>
+                    </div>
+                    <div class="one">
+                        <img src="images/team4.jpg" alt="">
+                        <p>CHRIS PHILIPS</p>
+                        <h3>Senior Designer</h3>
+                    </div>
+                </div>
+                <div class="contains2">
+                    <div class="one">
+                        <img src="images/team5.jpg" alt="">
+                        <p>JIMMY SMITH</p>
+                        <h3>Marketing Manager</h3>
+                    </div>
+                    <div class="one">
+                        <img src="images/team3.jpg" alt="">
+                        <p>ALIZA</p>
+                        <h3>SEO Monster</h3>
+                    </div>
+                    <div class="one">
+                        <img src="images/team6.jpg" alt="">
+                        <p>CELEIN JOHN</p>
+                        <h3>Senior Designer</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="life-page">
+            <div class="life-content">
+                <p>Life in zippy</p>
+                <div class="image">
+                    <img src="https://images.shiksha.com/mediadata/images/articles/1554792506phpOGrS3I.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="newsletter-page">
+            <div class="news">
+                <p>Newsletter Signup</p>
+                <input type="email" name=email id=email><a href="#"><button class="learnMore1">SIGN UP</button></a>
+                <a href="#"><button class="learnMore2">SIGN UP</button></a>
+            </div>
+            <div class="blog">
+                <p>Blog</p>
+                <div class="cards">
+                    <div class="card1">
+                        <img src="images/team7.jpg" alt="">
+                        <h3>Lorem Ipsum Dolor sit amet</h3>
+                        <h3>15 Jan, 2015</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos cum debitis rem quaerat
+                            recusandae sit quia, beatae delectus ullam.</p>
+                        <a href="#"><button class="learnMore2">Read More</button></a>
+                    </div>
+                    <div class="card2">
+                        <img src="images/team8.jpg" alt="">
+                        <h3>Lorem Ipsum Dolor sit amet</h3>
+                        <h3>15 Jan, 2015</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos cum debitis rem quaerat
+                            recusandae sit quia, beatae delectus ullam.</p>
+                        <a href="#"><button class="learnMore2">Read More</button></a>
+                    </div>
+                    <div class="card3">
+                        <img src="images/team9.jpg" alt="">
+                        <h3>Lorem Ipsum Dolor sit amet</h3>
+                        <h3>15 Jan, 2015</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos cum debitis rem quaerat
+                            recusandae sit quia, beatae delectus ullam.</p>
+                        <a href="#"><button class="learnMore2">Read More</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-page">
+                <div class="contact-content">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242118.14200178123!2d73.7228757701168!3d18.5245648559673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1630944416191!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="contact">
+                        <p>Contact</p>
+                        <label for="name">Name</label><br>
+                            <input type="text" id="name" name="name"><br>
+                        <label for="email">Email Address </label><br>
+                            <input type="email" name="email" id="email_id"><br>
+                        <label for="subject">Subject</label><br>
+                            <input type="text" name="subject" id="subject"><br>
+                        <label for="message">Message </label><br>
+                            <textarea id="message" name="message" rows="6" cols="50" >Enter the Message here...</textarea>
+                        <br><br>
+                        <input type="submit" value="Send">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>
